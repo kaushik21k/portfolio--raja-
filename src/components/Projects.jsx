@@ -54,9 +54,6 @@ export default function Projects() {
                 {p.tags.map(t => <span key={t} className="project-tag">{t}</span>)}
               </div>
               <div className="project-links">
-                <a href={p.github} className="proj-link" target="_blank" rel="noreferrer">
-                  <FiGithub /> Code
-                </a>
                 <a href={p.live} className="proj-link live" target="_blank" rel="noreferrer">
                   <FiExternalLink /> Live Tracking
                 </a>
