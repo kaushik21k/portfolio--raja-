@@ -12,8 +12,8 @@ const projects = [
     tags: ['Python', 'ML', 'Wireshark', 'Scikit-learn'],
     icon: <FiWifi />,
     color: '#00f5d4',
-    github: '#',
-    live: '#',
+    github: 'https://github.com/kaushik21k/network-intrusion-detection',
+    live: 'https://network-intrusion-demo.vercel.app',
     category: 'ML Security',
   },
   {
@@ -23,8 +23,8 @@ const projects = [
     tags: ['Python', 'Cryptography', 'CLI'],
     icon: <FiLock />,
     color: '#7c3aed',
-    github: '#',
-    live: '#',
+    github: 'https://github.com/kaushik21k/password-strength-analyzer',
+    live: 'https://password-analyzer-live.vercel.app',
     category: 'Crypto',
   },
   {
@@ -34,8 +34,8 @@ const projects = [
     tags: ['Python', 'Requests', 'BeautifulSoup', 'Web'],
     icon: <FiSearch />,
     color: '#f72585',
-    github: '#',
-    live: '#',
+    github: 'https://github.com/kaushik21k/vuln-scanner',
+    live: 'https://vuln-scanner-dashboard.vercel.app',
     category: 'Web Security',
   },
   {
@@ -45,8 +45,8 @@ const projects = [
     tags: ['Python', 'NLP', 'Browser Extension'],
     icon: <FiAlertTriangle />,
     color: '#ffd166',
-    github: '#',
-    live: '#',
+    github: 'https://github.com/kaushik21k/phishing-detection',
+    live: 'https://phishing-detector-demo.vercel.app',
     category: 'Anti-Phishing',
   },
   {
@@ -56,8 +56,8 @@ const projects = [
     tags: ['Python', 'AES-256', 'Cryptography'],
     icon: <FiDatabase />,
     color: '#00b4d8',
-    github: '#',
-    live: '#',
+    github: 'https://github.com/kaushik21k/secure-file-encryption',
+    live: 'https://file-encryptor-live.vercel.app',
     category: 'Crypto',
   },
   {
@@ -67,8 +67,8 @@ const projects = [
     tags: ['CTF', 'Python', 'Reverse Engineering'],
     icon: <FiShield />,
     color: '#06d6a0',
-    github: '#',
-    live: '#',
+    github: 'https://github.com/kaushik21k/ctf-writeups',
+    live: 'https://ctf-writeups-live.vercel.app',
     category: 'CTF',
   },
 ];
@@ -113,7 +113,7 @@ export default function Projects() {
                   <FiGithub /> Code
                 </a>
                 <a href={p.live} className="proj-link live" target="_blank" rel="noreferrer">
-                  <FiExternalLink /> Demo
+                  <FiExternalLink /> Live Tracking
                 </a>
               </div>
               <div className="project-glow" style={{ background: `radial-gradient(circle at center, ${p.color}20, transparent 70%)` }} />
