@@ -1,76 +1,21 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FiExternalLink, FiGithub, FiShield, FiWifi, FiLock, FiSearch, FiAlertTriangle, FiDatabase } from 'react-icons/fi';
+import { FiExternalLink, FiGithub, FiShield, FiWifi, FiLock, FiSearch, FiAlertTriangle, FiDatabase, FiUsers } from 'react-icons/fi';
 import './Projects.css';
 
 const projects = [
   {
     id: 'p1',
-    title: 'Network Intrusion Detection',
-    desc: 'ML-based IDS using Python and Scikit-learn to detect network anomalies and intrusions in real-time traffic analysis.',
-    tags: ['Python', 'ML', 'Wireshark', 'Scikit-learn'],
-    icon: <FiWifi />,
+    title: 'Crowd Management System',
+    desc: 'An automated crowd management system with real-time zone capacity monitoring, QR-based entry verification, and administrative alerting.',
+    tags: ['React', 'FastAPI', 'PostgreSQL', 'Tailwind'],
+    icon: <FiUsers />,
     color: '#00f5d4',
-    github: 'https://github.com/kaushik21k/network-intrusion-detection',
-    live: 'https://network-intrusion-demo.vercel.app',
-    category: 'ML Security',
-  },
-  {
-    id: 'p2',
-    title: 'Password Strength Analyzer',
-    desc: 'A comprehensive tool to analyze password strength, entropy, and susceptibility to dictionary or brute-force attacks.',
-    tags: ['Python', 'Cryptography', 'CLI'],
-    icon: <FiLock />,
-    color: '#7c3aed',
-    github: 'https://github.com/kaushik21k/password-strength-analyzer',
-    live: 'https://password-analyzer-live.vercel.app',
-    category: 'Crypto',
-  },
-  {
-    id: 'p3',
-    title: 'Vulnerability Scanner',
-    desc: 'Automated web vulnerability scanner detecting SQL injection, XSS, and CSRF flaws in web applications.',
-    tags: ['Python', 'Requests', 'BeautifulSoup', 'Web'],
-    icon: <FiSearch />,
-    color: '#f72585',
-    github: 'https://github.com/kaushik21k/vuln-scanner',
-    live: 'https://vuln-scanner-dashboard.vercel.app',
-    category: 'Web Security',
-  },
-  {
-    id: 'p4',
-    title: 'Phishing Detection System',
-    desc: 'Browser-based extension using NLP and URL analysis to identify and flag phishing websites in real-time.',
-    tags: ['Python', 'NLP', 'Browser Extension'],
-    icon: <FiAlertTriangle />,
-    color: '#ffd166',
-    github: 'https://github.com/kaushik21k/phishing-detection',
-    live: 'https://phishing-detector-demo.vercel.app',
-    category: 'Anti-Phishing',
-  },
-  {
-    id: 'p5',
-    title: 'Secure File Encryption',
-    desc: 'AES-256 based file encryption/decryption tool with key management and digital signature verification.',
-    tags: ['Python', 'AES-256', 'Cryptography'],
-    icon: <FiDatabase />,
-    color: '#00b4d8',
-    github: 'https://github.com/kaushik21k/secure-file-encryption',
-    live: 'https://file-encryptor-live.vercel.app',
-    category: 'Crypto',
-  },
-  {
-    id: 'p6',
-    title: 'CTF Writeup Platform',
-    desc: 'Personal CTF solution blog documenting techniques for pwn, reversing, crypto, and web challenges.',
-    tags: ['CTF', 'Python', 'Reverse Engineering'],
-    icon: <FiShield />,
-    color: '#06d6a0',
-    github: 'https://github.com/kaushik21k/ctf-writeups',
-    live: 'https://ctf-writeups-live.vercel.app',
-    category: 'CTF',
-  },
+    github: 'https://github.com/kaushik21k/crowd-management',
+    live: 'https://crowd-management-lyart.vercel.app',
+    category: 'Full Stack',
+  }
 ];
 
 export default function Projects() {
