@@ -54,9 +54,11 @@ export default function Skills() {
     <section id="skills" className="skills-section">
       <div className="container" ref={ref}>
         <motion.div initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
-          <h2 className="section-title">Skills & Arsenal</h2>
-          <div className="section-divider" />
-          <p className="section-subtitle">// MY TECHNICAL TOOLKIT</p>
+          <div className="section-header">
+            <span className="section-label">Toolkit</span>
+            <h2 className="section-title">Skills & <span>Arsenal</span></h2>
+            <p className="section-desc">My hands-on technical capabilities across offensive and defensive security domains.</p>
+          </div>
         </motion.div>
 
         <div className="skills-grid">

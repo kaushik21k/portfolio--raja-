@@ -28,9 +28,11 @@ export default function Certifications() {
     <section id="certifications" className="cert-section">
       <div className="container" ref={ref}>
         <motion.div initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
-          <h2 className="section-title">Certifications & Journey</h2>
-          <div className="section-divider" />
-          <p className="section-subtitle">// ACHIEVEMENTS & MILESTONES</p>
+          <div className="section-header">
+            <span className="section-label">Credentials</span>
+            <h2 className="section-title">Certifications & <span>Journey</span></h2>
+            <p className="section-desc">Milestones and learning achievements in my cybersecurity path.</p>
+          </div>
         </motion.div>
 
         <div className="cert-layout">

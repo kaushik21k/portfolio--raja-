@@ -26,18 +26,18 @@ function App() {
 
   if (loading) return (
     <div className="loader">
-      <div className="loader-inner">
-        <div className="loader-shield">
-          <svg viewBox="0 0 100 100" width="80">
-            <defs><linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stopColor="#00f5d4"/><stop offset="100%" stopColor="#7c3aed"/></linearGradient></defs>
-            <path d="M50 5 L90 20 L90 50 C90 75 70 92 50 98 C30 92 10 75 10 50 L10 20 Z" fill="url(#lg)"/>
-            <text x="50" y="62" fontFamily="monospace" fontSize="36" fontWeight="bold" fill="#0a0a0f" textAnchor="middle">R</text>
-          </svg>
-        </div>
-        <p className="loader-text">INITIALIZING SECURE CONNECTION...</p>
-        <div className="loader-bar"><div className="loader-fill" style={{width: `${Math.min(progress,100)}%`}}/></div>
-        <p className="loader-pct">{Math.min(Math.round(progress),100)}%</p>
+      <div className="loader-icon">
+        <svg viewBox="0 0 100 100" width="64">
+          <defs><linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stopColor="#00e5c3"/><stop offset="100%" stopColor="#8b5cf6"/></linearGradient></defs>
+          <path d="M50 5 L88 19 L88 50 C88 73 70 90 50 97 C30 90 12 73 12 50 L12 19 Z" fill="url(#lg)"/>
+          <text x="50" y="62" fontFamily="monospace" fontSize="34" fontWeight="bold" fill="#05050f" textAnchor="middle">R</text>
+        </svg>
       </div>
+      <p className="loader-label">Initializing Portfolio</p>
+      <div className="loader-bar-wrap">
+        <div className="loader-bar-fill" style={{width: `${Math.min(progress,100)}%`}} />
+      </div>
+      <p className="loader-pct">{Math.min(Math.round(progress),100)}%</p>
     </div>
   );
 

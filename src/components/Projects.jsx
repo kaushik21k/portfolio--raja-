@@ -81,9 +81,11 @@ export default function Projects() {
     <section id="projects" className="projects-section">
       <div className="container" ref={ref}>
         <motion.div initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
-          <h2 className="section-title">Projects</h2>
-          <div className="section-divider" />
-          <p className="section-subtitle">// SECURITY BUILDS</p>
+          <div className="section-header">
+            <span className="section-label">Work</span>
+            <h2 className="section-title">Featured <span>Projects</span></h2>
+            <p className="section-desc">Real security tools and research I've built from the ground up.</p>
+          </div>
         </motion.div>
 
         <div className="projects-grid">

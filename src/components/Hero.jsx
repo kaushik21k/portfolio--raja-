@@ -29,15 +29,11 @@ export default function Hero() {
 
       <div className="hero-content">
         <motion.div initial={{opacity:0,y:30}} animate={{opacity:1,y:0}} transition={{duration:0.7}}>
-          <p className="hero-greeting">
-            <span className="mono-tag">&lt;</span>
-            Hello, World!
-            <span className="mono-tag">/&gt;</span>
-          </p>
+          <p className="hero-greeting">3rd Year · Cyber Security</p>
         </motion.div>
 
         <motion.h1 className="hero-name" initial={{opacity:0,y:40}} animate={{opacity:1,y:0}} transition={{duration:0.7,delay:0.2}}>
-          Rajakumar
+          Raja<span>kumar</span>
         </motion.h1>
 
         <motion.div className="hero-role" initial={{opacity:0,y:30}} animate={{opacity:1,y:0}} transition={{duration:0.7,delay:0.4}}>
@@ -62,10 +58,10 @@ export default function Hero() {
 
         <motion.div className="hero-cta" initial={{opacity:0,y:20}} animate={{opacity:1,y:0}} transition={{duration:0.7,delay:0.8}}>
           <Link to="contact" smooth duration={600} offset={-70}>
-            <button className="glow-btn primary"><FiMail /> Get In Touch</button>
+            <button className="btn btn-primary"><FiMail /> Get In Touch</button>
           </Link>
           <Link to="projects" smooth duration={600} offset={-70}>
-            <button className="glow-btn outline">View Projects</button>
+            <button className="btn btn-ghost">View Projects</button>
           </Link>
         </motion.div>
 

@@ -47,9 +47,11 @@ export default function Contact() {
     <section id="contact" className="contact-section">
       <div className="container" ref={ref}>
         <motion.div initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
-          <h2 className="section-title">Get In Touch</h2>
-          <div className="section-divider" />
-          <p className="section-subtitle">// CONTACT & FEEDBACK</p>
+          <div className="section-header">
+            <span className="section-label">Contact</span>
+            <h2 className="section-title">Get In <span>Touch</span></h2>
+            <p className="section-desc">Open to internships, collaborations, and cybersecurity discussions.</p>
+          </div>
         </motion.div>
 
         <div className="contact-layout">
@@ -127,7 +129,7 @@ export default function Contact() {
                 </div>
               )}
 
-              <button type="submit" className="glow-btn primary submit-btn" disabled={status === 'sending'} id="submit-contact">
+              <button type="submit" className="btn btn-primary submit-btn" disabled={status === 'sending'} id="submit-contact">
                 {status === 'sending' ? (
                   <><span className="spinner" /> Sending...</>
                 ) : (

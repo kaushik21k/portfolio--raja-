@@ -17,9 +17,11 @@ export default function About() {
     <section id="about" className="about-section">
       <div className="container">
         <motion.div ref={ref} initial={{ opacity: 0, y: 40 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
-          <h2 className="section-title">About Me</h2>
-          <div className="section-divider" />
-          <p className="section-subtitle">// WHO AM I</p>
+          <div className="section-header">
+            <span className="section-label">Who I Am</span>
+            <h2 className="section-title">About <span>Me</span></h2>
+            <p className="section-desc">A cybersecurity student who lives and breathes digital security.</p>
+          </div>
         </motion.div>
 
         <div className="about-grid">

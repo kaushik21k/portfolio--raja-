@@ -1,75 +1,92 @@
-.projects-section { background: linear-gradient(180deg, transparent, rgba(247,37,133,0.02), transparent); }
+/* ── Projects ────────────────────────────────── */
+.projects-section {
+  background: linear-gradient(180deg, transparent 0%, rgba(139,92,246,0.03) 50%, transparent 100%);
+}
 
 .projects-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
 }
 
 .project-card {
-  background: #12121f; border: 1px solid rgba(255,255,255,0.06);
+  background: #111120;
+  border: 1px solid rgba(255,255,255,0.06);
   border-radius: 16px; padding: 1.5rem;
   position: relative; overflow: hidden;
-  transition: all 0.3s ease; cursor: default;
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+  display: flex; flex-direction: column; gap: 0.75rem;
 }
 
 .project-card:hover {
-  border-color: var(--accent, #00f5d4);
-  box-shadow: 0 0 30px color-mix(in srgb, var(--accent, #00f5d4) 20%, transparent);
-  transform: translateY(-6px);
+  border-color: color-mix(in srgb, var(--accent, #00e5c3) 40%, transparent);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+  transform: translateY(-5px);
 }
 
-.project-glow {
-  position: absolute; inset: 0; opacity: 0;
+/* Subtle top accent line */
+.project-card::before {
+  content: '';
+  position: absolute; top: 0; left: 1.5rem; right: 1.5rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent, #00e5c3), transparent);
+  opacity: 0;
   transition: opacity 0.3s;
-  pointer-events: none;
 }
-.project-card:hover .project-glow { opacity: 1; }
+.project-card:hover::before { opacity: 0.6; }
+
+.project-glow { display: none; } /* removed */
 
 .project-header {
   display: flex; align-items: center; justify-content: space-between;
-  margin-bottom: 1rem;
 }
 
 .project-icon {
-  font-size: 1.3rem; padding: 0.6rem; border-radius: 10px;
+  font-size: 1.15rem; padding: 0.55rem; border-radius: 9px;
 }
 
 .project-category {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.7rem; padding: 0.25rem 0.7rem;
-  border-radius: 20px; border: 1px solid; letter-spacing: 1px;
+  font-size: 0.67rem; padding: 0.22rem 0.65rem;
+  border-radius: 99px; border: 1px solid; letter-spacing: 0.5px;
 }
 
 .project-title {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.05rem; font-weight: 700; color: #e2e8f0;
-  margin-bottom: 0.6rem;
+  font-size: 1rem; font-weight: 700; color: #f0f0f5;
+  line-height: 1.4;
 }
 
-.project-desc { font-size: 0.83rem; color: #94a3b8; line-height: 1.7; margin-bottom: 1rem; }
+.project-desc {
+  font-size: 0.82rem; color: #8a8aaa; line-height: 1.75;
+  flex: 1;
+}
 
-.project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.2rem; }
+.project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 
 .project-tag {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.7rem; padding: 0.2rem 0.6rem;
-  border-radius: 4px; background: rgba(255,255,255,0.05);
-  color: #94a3b8; border: 1px solid rgba(255,255,255,0.08);
+  font-size: 0.68rem; padding: 0.18rem 0.55rem;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.04);
+  color: #55556a;
+  border: 1px solid rgba(255,255,255,0.06);
 }
 
-.project-links { display: flex; gap: 0.8rem; }
+.project-links { display: flex; gap: 0.7rem; margin-top: auto; padding-top: 0.25rem; }
 
 .proj-link {
-  display: flex; align-items: center; gap: 0.35rem;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.78rem; color: #94a3b8; text-decoration: none;
-  padding: 0.35rem 0.8rem; border-radius: 6px;
-  border: 1px solid rgba(255,255,255,0.1);
-  transition: all 0.25s;
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  font-family: 'Space Grotesk', sans-serif; font-weight: 600;
+  font-size: 0.78rem; color: #8a8aaa; text-decoration: none;
+  padding: 0.35rem 0.85rem; border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: all 0.2s;
+}
+.proj-link:hover {
+  color: var(--accent, #00e5c3);
+  border-color: rgba(0,229,195,0.3);
+  background: rgba(0,229,195,0.06);
 }
 
-.proj-link:hover { color: var(--accent, #00f5d4); border-color: var(--accent, #00f5d4); background: rgba(0,0,0,0.2); }
-.proj-link.live:hover { color: #7c3aed; border-color: #7c3aed; }
-
 @media (max-width: 1024px) { .projects-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 640px) { .projects-grid { grid-template-columns: 1fr; } }
+@media (max-width: 640px)  { .projects-grid { grid-template-columns: 1fr; } }

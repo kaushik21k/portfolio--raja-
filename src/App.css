@@ -1,47 +1,65 @@
 .app { position: relative; min-height: 100vh; }
 
+/* ── Loader ─────────────────────────────── */
 .loader {
   position: fixed; inset: 0;
-  background: #0a0a0f;
+  background: #080810;
   display: flex; align-items: center; justify-content: center;
-  z-index: 9999;
+  z-index: 9999; flex-direction: column; gap: 2rem;
 }
 
-.loader-inner { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1.2rem; }
+.loader-icon {
+  animation: float 2s ease-in-out infinite;
+}
 
-.loader-shield { animation: float 2s ease-in-out infinite; }
-
-.loader-text {
+.loader-label {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.8rem;
-  color: #00f5d4;
-  letter-spacing: 3px;
+  font-size: 0.72rem;
+  color: rgba(0, 229, 195, 0.7);
+  letter-spacing: 4px;
+  text-transform: uppercase;
 }
 
-.loader-bar {
-  width: 240px; height: 4px;
-  background: rgba(0,245,212,0.1);
-  border-radius: 2px; overflow: hidden;
+.loader-bar-wrap {
+  width: 200px;
+  height: 2px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 99px;
+  overflow: hidden;
 }
 
-.loader-fill {
+.loader-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, #00f5d4, #7c3aed);
-  border-radius: 2px;
-  transition: width 0.15s ease;
-  box-shadow: 0 0 10px #00f5d4;
+  background: linear-gradient(90deg, #00e5c3, #8b5cf6);
+  border-radius: 99px;
+  transition: width 0.12s ease;
 }
 
 .loader-pct {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.75rem;
-  color: #94a3b8;
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.25);
 }
 
-section { padding: 5rem 1.5rem; position: relative; }
+/* ── Sections ───────────────────────────── */
+section {
+  padding: 6rem 2rem;
+  position: relative;
+}
 
-.container { max-width: 1100px; margin: 0 auto; }
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── Noise texture overlay ──────────────── */
+.app::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0; opacity: 0.4;
+}
 
 @media (max-width: 768px) {
-  section { padding: 3.5rem 1rem; }
+  section { padding: 4rem 1.25rem; }
 }
