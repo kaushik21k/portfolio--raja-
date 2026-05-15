@@ -1,0 +1,67 @@
+.cert-section { background: linear-gradient(180deg, transparent, rgba(0,245,212,0.02), transparent); }
+
+.cert-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
+
+.cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+.cert-card { position: relative; overflow: hidden; padding-bottom: 1.2rem; }
+
+.cert-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem; }
+
+.cert-icon {
+  font-size: 1.2rem; padding: 0.6rem; border-radius: 8px;
+}
+
+.cert-status {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem; padding: 0.2rem 0.6rem;
+  border-radius: 20px; letter-spacing: 1px; font-weight: 700;
+}
+.cert-status.done { background: rgba(6,214,160,0.15); color: #06d6a0; }
+.cert-status.active { background: rgba(0,180,216,0.15); color: #00b4d8; }
+.cert-status.progress { background: rgba(247,37,133,0.15); color: #f72585; }
+
+.cert-title { font-size: 0.85rem; font-weight: 700; color: #e2e8f0; margin-bottom: 0.5rem; line-height: 1.4; }
+
+.cert-meta {
+  display: flex; flex-direction: column; gap: 0.25rem;
+  font-size: 0.75rem; color: #94a3b8;
+  font-family: 'JetBrains Mono', monospace;
+}
+.cert-meta span { display: flex; align-items: center; gap: 0.4rem; }
+
+.cert-accent-bar {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 2px;
+}
+
+.timeline-container { }
+
+.timeline-heading {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem; color: #00f5d4;
+  margin-bottom: 1.5rem; letter-spacing: 2px; text-transform: uppercase;
+}
+
+.timeline { position: relative; padding-left: 1.5rem; }
+.timeline::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+  width: 2px; background: linear-gradient(#00f5d4, #7c3aed, transparent);
+}
+
+.timeline-item { position: relative; margin-bottom: 1.5rem; }
+
+.tl-dot {
+  position: absolute; left: -1.95rem; top: 0.3rem;
+  width: 10px; height: 10px; border-radius: 50%;
+  background: #00f5d4; border: 2px solid #0a0a0f;
+  box-shadow: 0 0 8px #00f5d4;
+}
+
+.tl-content { }
+.tl-year { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #7c3aed; font-weight: 700; }
+.tl-event { font-size: 0.9rem; font-weight: 700; color: #e2e8f0; margin: 0.2rem 0; }
+.tl-detail { font-size: 0.8rem; color: #94a3b8; }
+
+@media (max-width: 1024px) { .cert-layout { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .cert-grid { grid-template-columns: 1fr; } }
